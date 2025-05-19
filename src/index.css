@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+/* Tailwind 4 directive, not a CSS at-rule */
 @theme {
   --color-border: hsl(var(--border));
   --color-background: hsl(var(--background));
@@ -86,4 +87,65 @@
 
     --border: 217 33% 20%;
   }
+}
+
+@utility container {
+  /* center the container */
+  margin-inline: auto;
+  /* 2rem == 32px */
+  padding-inline: 2rem;
+
+  @media (width >= 640px) {
+    max-width: 640px;
+  }
+  @media (width >= 768px) {
+    max-width: 768px;
+  }
+  @media (width >= 1024px) {
+    max-width: 1024px;
+  }
+  @media (width >= 1280px) {
+    max-width: 1280px;
+  }
+  @media (width >= 1400px) {
+    max-width: 1400px;
+  }
+}
+
+@utility text-glow {
+  @apply relative;
+  /* offset-x | offset-y | blur radius | color*/
+  text-shadow: 0 0 10px rgba(167, 139, 250, 0.5);
+}
+
+/* Cards for showcasing personal projects */
+@utility card-hover {
+  @apply transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg;
+}
+
+/* apply to cards */
+@utility gradient-border {
+  /* rounded-md is a border-radius utility-class of tailwind */
+  @apply relative rounded-md;
+  background: linear-gradient(to right, hsl(var(--card)), hsl(var(--card)));
+  background-clip: padding-box;
+  border: 1px solid transparent;
+}
+
+@utility cosmic-button {
+  /* The colors are defined in @theme */
+  @apply px-6 py-2 rounded-full bg-primary text-primary-foreground font-medium 
+         transition-all duration-300 hover:shadow-[0_0_10px_rgba(139,92,246,0.5)]
+         hover:scale-105 active:scale-95;
+}
+
+/* Star & meteor are only available in dark-mode */
+@utility star {
+  @apply absolute rounded-full bg-white;
+  box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.4);
+}
+
+@utility meteor {
+  @apply absolute bg-linear-to-r from-white via-white to-transparent rounded-full;
+  box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.3);
 }
