@@ -24,15 +24,6 @@ const skills = [
   { name: "VS Code", level: 95, category: "tools" },
 ]
 
-const skills2 = [
-  // Frontend
-  { name: "devicon-javascript-plain colored", category: "frontend" },
-  { name: "devicon-typescript-plain colored", category: "frontend" },
-  { name: "devicon-react-original colored", category: "frontend" },
-
-  //
-]
-
 const categories = ["all", "frontend", "backend", "tools"]
 
 export const SkillsSection = () => {
@@ -65,14 +56,6 @@ export const SkillsSection = () => {
             </button>
           ))}
         </div>
-        
-        <ul className="text-[3rem] list-none"> 
-          {skills2.map((skill) => (  
-            <li className="inline-block mr-[1rem]">
-              <i class={skill.name}></i>
-            </li>
-          ))}
-        </ul>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredSkills.map((skill, key) => (
