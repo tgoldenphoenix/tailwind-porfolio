@@ -16,23 +16,39 @@ export const ProjectsSection = () => {
   return (
     <section id="projects" className="py-24 px-4 relative">
       <div className="container mx-auto max-w-5xl">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
+        <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
           {" "}
-          Featured <span className="text-primary"> Projects </span>
+          Latest <span className="text-primary"> Side Projects </span>
         </h2>
 
-        <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+        {/* <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
           Here are some of my recent projects. Each project was carefully
           crafted with attention to detail, performance, and user experience.
-        </p>
+        </p> */}
 
-        <div className="flex justify-center gap-8">
+        {/* <div className="container">
+          <div className="flex-wrap">
+            <div>
+              <a href="https://www.google.com/" className="block relative max-w-[530px]" target="_blank" rel="noreferrer">
+                <div className="flex flex-col caption absolute">
+                  <div className="caption-content">
+                    <div>Pod Foods</div>
+                    <p>Software and data-enabled distribution and logistics platform!</p>
+                  </div>
+                </div>
+                <img src="/projects/light.png" alt="" className="max-w-[100%]"/>
+              </a>
+            </div>
+          </div>
+        </div> */}
+
+        <div className="flex flex-col items-center justify-center gap-8">
           {projects.map((project, key) => (
             <div
               key={key}
-              className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover"
+              className="md:w-[42rem] group bg-card rounded-lg overflow-hidden shadow-xs card-hover"
             >
-              <div className="h-48 overflow-hidden">
+              <div className="h-48 md:h-78 overflow-hidden">
                 <img
                   src={project.image}
                   alt={project.title}
