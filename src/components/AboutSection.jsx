@@ -15,13 +15,16 @@ export const AboutSection = () => {
               A Passionate Web Developer
             </h3>
 
-            <p className="text-muted-foreground">
-              A Self-driven and self-taught fast learner with a constant thirst to learn new things. Extremely passsionate about Software Engineering & Computer Science
+            <p className="text-muted-foreground text-left">
+              🔵 A Self-driven and &nbsp;
+              <mark class="high-light bg-[#ffd54f] rounded-xl p-1 leading-normal font-semibold mx-[-4px]">self-taught fast learner</mark>&nbsp;
+              with a constant thirst to learn new things. Extremely passsionate about Software Engineering & Computer Science
             </p>
 
-            <p className="text-muted-foreground">
-              Love building responsive, accessible, and performant web
-              applications using modern technologies.
+            <p className="text-muted-foreground text-left">
+              🔵 Love building &nbsp;
+              <mark class="high-light bg-[#ffd54f] rounded-xl p-1 leading-normal font-semibold mx-[-4px]">responsive, accessible, and performant</mark>&nbsp;
+              web applications using modern technologies.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
@@ -31,7 +34,7 @@ export const AboutSection = () => {
               </a>
 
               <a
-                href=""
+                href="https://github.com/tgoldenphoenix"
                 className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300"
               >
                 Download CV
