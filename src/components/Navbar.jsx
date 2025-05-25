@@ -27,7 +27,7 @@ export const Navbar = () => {
     <nav
       className={cn(
         "fixed w-full z-40 transition-all duration-300",
-        "py-5 bg-background/80 backdrop-blur-md shadow-xs"
+        "py-4 bg-background/80 backdrop-blur-md shadow-xs"
         // isScrolled ? "py-3 bg-background/80 backdrop-blur-md shadow-xs" : "py-5"
       )}
     >
@@ -37,8 +37,8 @@ export const Navbar = () => {
           href="#hero"
         >
           <span className="relative z-10">
-            <span className="text-glow text-foreground"> Pham An </span>{" "}
-            Hao
+            <span className="text-glow text-foreground"> Pham </span>{" "}
+            An Hao
           </span>
         </a>
 
