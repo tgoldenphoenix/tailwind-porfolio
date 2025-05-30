@@ -10,7 +10,7 @@ const skills2 = [
   { name: "devicon-react-original colored", title: "ReactJS" },
   { name: "devicon-nodejs-plain-wordmark colored", title: "NodeJS" },
   { name: "devicon-postgresql-plain colored", title: "PostgreSQL" },
-  { name: "devicon-materialui-plain colore", title: "Material UI" },
+  { name: "devicon-materialui-plain colored", title: "Material UI" },
   { name: "devicon-tailwindcss-original colored", title: "TailwindCSS" },
   { name: "devicon-github-original", title: "Git" },
 ]
@@ -27,8 +27,8 @@ export const SkillsSection = () => {
         <div className="font-medium text-2xl mb-5">Programming Languages & Tools:</div>
 
         <ul className="text-[3rem] list-none"> 
-          {skills2.map((skill) => (  
-            <li className="relative inline-block mr-[1rem]">
+          {skills2.map((skill, index) => (  
+            <li className="relative inline-block mr-[1rem]" key={index}>
               <i className={"skill-badge hover:text-red "+skill.name} title={skill.title}></i>
             </li>
           ))}

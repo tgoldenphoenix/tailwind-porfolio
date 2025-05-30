@@ -17,13 +17,13 @@ export const AboutSection = () => {
 
             <p className="text-muted-foreground text-left">
               🔵 A Self-driven and &nbsp;
-              <mark class="high-light bg-[#ffd54f] rounded-xl p-1 leading-normal font-semibold mx-[-4px]">self-taught fast learner</mark>&nbsp;
+              <mark className="high-light bg-[#ffd54f] rounded-xl p-1 leading-normal font-semibold mx-[-4px]">self-taught fast learner</mark>&nbsp;
               with a constant thirst to learn new things. Extremely passsionate about Software Engineering & Computer Science
             </p>
 
             <p className="text-muted-foreground text-left">
               🔵 Love building &nbsp;
-              <mark class="high-light bg-[#ffd54f] rounded-xl p-1 leading-normal font-semibold mx-[-4px]">responsive, accessible, and performant</mark>&nbsp;
+              <mark className="high-light bg-[#ffd54f] rounded-xl p-1 leading-normal font-semibold mx-[-4px]">responsive, accessible, and performant</mark>&nbsp;
               web applications using modern technologies.
             </p>
 

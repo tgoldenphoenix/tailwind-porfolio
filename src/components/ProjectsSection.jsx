@@ -3,13 +3,13 @@ import { ArrowRight, ExternalLink, Github } from "lucide-react"
 const projects = [
   {
     id: 1,
-    title: "Trello clone",
-    description: "A Cloning of Trello using React and Material UI.",
+    title: "Trello",
+    description: "MERN stack Work Management web application.",
     image: "/projects/light.png",
-    tags: ["React", "Material UI", "Express"],
-    demoUrl: null,
-    githubUrl: "#",
-  }
+    tags: ["React", "Material UI", "Nodejs Express", "MongoDB Atlas"],
+    demoUrl: "https://trello-web-sage-psi.vercel.app/",
+    githubUrl: "https://github.com/tgoldenphoenix/trello-clone-web",
+  },
 ]
 
 export const ProjectsSection = () => {
@@ -58,8 +58,8 @@ export const ProjectsSection = () => {
 
               <div className="p-6">
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tags.map((tag) => (
-                    <span className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground">
+                  {project.tags.map((tag, index) => (
+                    <span className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground" key={index}>
                       {tag}
                     </span>
                   ))}
