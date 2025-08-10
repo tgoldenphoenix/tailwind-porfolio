@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-/* Tailwind 4 directive, not a CSS at-rule */
+/* This is a Tailwind directive, not a CSS at-rule */
 @theme {
   --color-border: hsl(var(--border));
   --color-background: hsl(var(--background));
@@ -76,6 +76,7 @@
     --border: 214 32% 91%;
   }
 
+  /* this class in in the index.html */
   .dark {
     --background: 222 47% 4%;
     --foreground: 213 31% 91%;
@@ -110,6 +111,7 @@
   /* 2rem == 32px */
   padding-inline: 2rem;
 
+  /* giong bootstrap */
   @media (width >= 640px) {
     max-width: 640px;
   }
