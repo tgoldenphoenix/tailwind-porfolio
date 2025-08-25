@@ -3,7 +3,8 @@ import { useEffect, useState } from "react"
 import { cn } from "@/lib/utils"
 
 export const ThemeToggle = () => {
-  // Default start in dark mode
+  // Default start in dark mode (index.html class)
+  // default state isDarkMode false => icon is the sun to change to light mode
   const [isDarkMode, setIsDarkMode] = useState(false)
 
   useEffect(() => {
@@ -12,7 +13,7 @@ export const ThemeToggle = () => {
       setIsDarkMode(true)
       document.documentElement.classList.add("dark")
     } else {
-      localStorage.setItem("theme", "light")
+      localStorage.setItem("themee", "light")
       setIsDarkMode(false)
     }
   }, [])
@@ -21,6 +22,7 @@ export const ThemeToggle = () => {
     if (isDarkMode) {
       document.documentElement.classList.remove("dark")
       localStorage.setItem("themee", "sang")
+      // This state will change the displayed icon
       setIsDarkMode(false)
     } else {
       document.documentElement.classList.add("dark")
@@ -33,14 +35,14 @@ export const ThemeToggle = () => {
     <button 
       onClick={toggleTheme}
       className={cn(
-        "fixed max-sm:hidden top-5 right-5 z-50 p-2 rounded-full transition-colors duration-300",
+        "fixed max-sm:hidden bottom-5 right-5 z-50 p-2 rounded-full transition-colors duration-300 border-2 border-white border-opacity-40 hover:scale-[1.15] active:scale-105 transition-all",
         "focus:outlin-hidden"
       )}
     >
       {isDarkMode ? (
-        <Sun className="h-6 w-6 text-yellow-300" />
+        <Sun className="h-7 w-7 text-yellow-300" />
       ) : (
-        <Moon className="h-6 w-6 text-blue-900" />
+        <Moon className="h-7 w-7 text-blue-900" />
       )}
     </button>
   )

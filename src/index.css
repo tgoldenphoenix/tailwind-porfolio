@@ -65,6 +65,7 @@
 
 @layer base {
   :root {
+    /* This is the light theme */
     --background: 210 40% 98%;
     --foreground: 222 47% 11%;
 
@@ -105,13 +106,14 @@
   }
 }
 
+/* Creating a utility class */
 @utility container {
   /* center the container */
   margin-inline: auto;
   /* 2rem == 32px */
   padding-inline: 2rem;
 
-  /* giong bootstrap */
+  /* similar to bootstrap */
   @media (width >= 640px) {
     max-width: 640px;
   }
@@ -130,6 +132,7 @@
 }
 
 @utility text-glow {
+  /* apply a tailwind-based style */
   @apply relative;
   /* offset-x | offset-y | blur radius | color*/
   text-shadow: 0 0 10px rgba(167, 139, 250, 0.5);
@@ -150,7 +153,7 @@
 }
 
 @utility cosmic-button {
-  /* The colors are defined in @theme */
+  /* The colors are defined in @theme & @layer base */
   @apply px-6 py-2 rounded-full bg-primary text-primary-foreground font-medium 
          transition-all duration-300 hover:shadow-[0_0_10px_rgba(139,92,246,0.5)]
          hover:scale-105 active:scale-95;
