@@ -7,27 +7,33 @@ import { ProjectsSection } from "../components/ProjectsSection"
 import { SkillsSection } from "../components/SkillsSection"
 import { ThemeToggle } from "../components/ThemeToggle"
 import { StarBackground } from "@/components/StarBackground"
+import { useState } from "react"
+import { ThemeContext } from "../context/ThemeContext"
 
 export const Home = () => {
+  const [isDarkMode, setIsDarkMode] = useState(false)
+
   return <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
-    <ThemeToggle />
+    <ThemeContext.Provider value={{isDarkMode, setIsDarkMode}}>
+      <ThemeToggle />
 
-    {/* Background Effects */}
-    <StarBackground />
+      {/* Background Effects */}
+      {isDarkMode && <StarBackground />}
 
-    {/* Navbar */}
-    <Navbar />
+      {/* Navbar */}
+      <Navbar />
 
-    {/* Main Content */}
-    <main>
-      <HeroSection />
-      <AboutSection />
-      <SkillsSection />
-      <ProjectsSection />
-      <ContactSection />
-    </main>
+      {/* Main Content */}
+      <main>
+        <HeroSection />
+        <AboutSection />
+        <SkillsSection />
+        <ProjectsSection />
+        <ContactSection />
+      </main>
 
-    {/* Footer */}
-    <Footer />
+      {/* Footer */}
+      <Footer />
+    </ThemeContext.Provider>
   </div>
 }

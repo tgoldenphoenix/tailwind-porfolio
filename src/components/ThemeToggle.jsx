@@ -1,22 +1,27 @@
 import { Moon, Sun } from "lucide-react"
 import { useEffect, useState } from "react"
 import { cn } from "@/lib/utils"
+import { useContext } from 'react'
+import { ThemeContext } from "../context/ThemeContext"
 
 export const ThemeToggle = () => {
   // Default start in dark mode (index.html class)
   // default state isDarkMode false => icon is the sun to change to light mode
-  const [isDarkMode, setIsDarkMode] = useState(false)
+  // const [isDarkMode, setIsDarkMode] = useState(false)
+  const { isDarkMode, setIsDarkMode } = useContext(ThemeContext)
 
   useEffect(() => {
     const storedTheme = localStorage.getItem("themee")
-    if (storedTheme === "toi") {
-      setIsDarkMode(true)
-      document.documentElement.classList.add("dark")
-    } else {
-      localStorage.setItem("themee", "light")
+    if (storedTheme === "sang") {
       setIsDarkMode(false)
+      document.documentElement.classList.remove("dark")
+    } else {
+      // localStorage.setItem("themee", "light")
+      localStorage.setItem("themee", "dark")
+      setIsDarkMode(true)
+      // document.documentElement.classList.add("dark")
     }
-  }, [])
+  }, [isDarkMode])
 
   const toggleTheme = () => {
     if (isDarkMode) {
