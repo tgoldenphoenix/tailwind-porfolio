@@ -4,7 +4,8 @@
 
 ## Tech
 
-Tailwind 4
+- Tailwind 4
+- Theme toggle with `useContext()` hook
 
 ## Installation
 
@@ -24,6 +25,10 @@ Dependencies:
 `min-h-screen` sets `min-height: 100vh`
 
 `max-sm:hidden` hidden when <= 640px
+
+`inset-0` shorthand for `top right bottom left`
+
+`z-0` => `z-index` 0
 
 ## HSL colors
 

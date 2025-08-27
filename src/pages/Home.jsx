@@ -9,6 +9,7 @@ import { ThemeToggle } from "../components/ThemeToggle"
 import { StarBackground } from "@/components/StarBackground"
 import { useState } from "react"
 import { ThemeContext } from "../context/ThemeContext"
+import LightBgGradient from "../components/LightBgGradient"
 
 export const Home = () => {
   const [isDarkMode, setIsDarkMode] = useState(false)
@@ -18,7 +19,13 @@ export const Home = () => {
       <ThemeToggle />
 
       {/* Background Effects */}
-      {isDarkMode && <StarBackground />}
+      {/* {isDarkMode && <StarBackground />} */}
+
+      {isDarkMode ? (
+        <StarBackground />
+      ) : (
+        <LightBgGradient />
+      )}
 
       {/* Navbar */}
       <Navbar />
