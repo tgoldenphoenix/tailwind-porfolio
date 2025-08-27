@@ -22,7 +22,7 @@ export const HeroSection = () => {
             <br/>
             <span class="font-bold">a Full-Stack Web Developer</span>. 
           </h1>
-          <p className="text-lg md:text-2xl">Welcome to my site ✋</p>
+          <p className="text-lg md:text-2xl light-hero-header">Welcome to my site ✋</p>
           {/* <p 
             className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3"
           >Hi there! I'm An Hao, a Software Engineer. Welcome to my site ✋</p> */}
