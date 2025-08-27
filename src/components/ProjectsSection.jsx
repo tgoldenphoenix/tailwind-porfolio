@@ -10,6 +10,15 @@ const projects = [
     demoUrl: "https://trello-web-sage-psi.vercel.app/",
     githubUrl: "https://github.com/tgoldenphoenix/trello-clone-web",
   },
+  {
+    id: 2,
+    title: "E-Commerce API",
+    description: "Spring Boot shoppinng API with 6 tables.",
+    image: "/projects/shopping-cart-erd.drawio.png",
+    tags: ["Spring Boot", "MySQL"],
+    demoUrl: null,
+    githubUrl: "https://github.com/tgoldenphoenix/ShoppingCart-SpringBoot",
+  },
 ]
 
 export const ProjectsSection = () => {

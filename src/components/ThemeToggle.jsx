@@ -12,14 +12,16 @@ export const ThemeToggle = () => {
 
   useEffect(() => {
     const storedTheme = localStorage.getItem("themee")
-    if (storedTheme === "sang") {
-      setIsDarkMode(false)
-      document.documentElement.classList.remove("dark")
-    } else {
-      // localStorage.setItem("themee", "light")
+    if (storedTheme === "toi") {
       localStorage.setItem("themee", "dark")
-      setIsDarkMode(true)
+      document.documentElement.classList.add("dark")
+
+      // setIsDarkMode(false)
+      // document.documentElement.classList.remove("dark")
       // document.documentElement.classList.add("dark")
+    } else {
+      localStorage.setItem("themee", "light")
+      setIsDarkMode(false)
     }
   }, [isDarkMode])
 

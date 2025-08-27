@@ -65,6 +65,7 @@ export const StarBackground = () => {
         <div
           key={star.id}
           className="star animate-pulse-subtle"
+          // Inline css
           style={{
             width: star.size + "px",
             height: star.size + "px",

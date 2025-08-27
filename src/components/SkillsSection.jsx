@@ -10,10 +10,12 @@ const skills2 = [
   { name: "devicon-react-original colored", title: "ReactJS" },
   { name: "devicon-nodejs-plain-wordmark colored", title: "NodeJS" },
   { name: "devicon-postgresql-plain colored", title: "PostgreSQL" },
+  { name: "devicon-microsoftsqlserver-plain-wordmark colored", title: "Microsoft SQL Server" },
   { name: "devicon-materialui-plain colored", title: "Material UI" },
   { name: "devicon-tailwindcss-original colored", title: "TailwindCSS" },
   { name: "devicon-github-original", title: "Git" },
   { name: "devicon-java-plain-wordmark colored", title: "Java" },
+  { name: "devicon-spring-original colored", title: "Spring Framework" },
   { name: "devicon-bootstrap-plain colored", title: "Bootstrap" },
 ]
 
